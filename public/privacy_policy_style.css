@@ -1,0 +1,22 @@
+body {
+    min-height: 100dvh;
+    background: rgb(36, 35, 35);
+    display: flex;
+    color: white;
+    font-size: 14px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.privacy-policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.privacy-policy-container h1, .privacy-policy-container h2 {    
+    text-align: center;
+    margin-bottom: 20px;
+}
+.privacy-policy-container p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}

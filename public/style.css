@@ -1,0 +1,479 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #242424;
+  z-index: 1000;
+  padding: 16px 4px;   /* add horizontal padding */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: flex-end; /* right aligned */
+  align-items: center;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    padding-right: 40px;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+.navbar ul li a:hover {
+    color: #1B9E9E;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:active {
+    color: #47D6CD;
+}
+
+/* .navbar .submark img{
+  position: absolute;
+  left: 40px;
+  bottom: 16px;             
+  max-width: 65px !important;  
+} */
+
+/* Header */
+.header-section {
+  position: relative; 
+  height: 80vh;
+  overflow: hidden;
+  text-align: left; 
+}
+
+
+.header-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header-content {
+  position: relative;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 6% 8%;
+  gap: 40px;
+  z-index: 1;
+  top: 50%;
+ 
+  
+}
+
+.logo {
+  position: static;
+  width: clamp(280px, 40vw, 600px);
+  max-width: 100%;
+}
+
+
+.mission-statement {
+  position: static;
+  font-size: clamp(16px, 2vw, 24px);
+  max-width: clamp(320px, 45vw, 653px);
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 1.25;
+  color: white;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-align: left;          
+  display: flex;
+  align-items: center;       
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  text-align: center;
+  scroll-margin-top: 60px; 
+}
+
+
+.follow-section {
+  background-color: #f5f5f5;
+}
+
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between; /* text left, image right */
+  align-items: center;
+  padding: 100px 80px;
+  background-color: #f5f5f5;
+  gap: 40px; /* space between text and image */
+}
+
+/* Text column */
+.about-content {
+  max-width: 50%;       /* takes up roughly half the section */
+  text-align: left;
+}
+
+/* Title */
+.about-content h2 {
+  font-family: 'Futura', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Paragraph */
+.about-content p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Image column */
+.about-image {
+  max-width: 50%;       /* takes up roughly half the section */
+  display: flex;
+  justify-content: flex-end; /* image aligned to the right */
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+/* Trim */
+.header-trim {
+  width: 100%;
+  overflow: hidden;       /* no scroll */
+  line-height: 0;         /* no extra space */
+}
+
+.header-trim img {
+  display: block;
+  width: 100%;           /* make trim span full width */
+  height: auto;
+}
+
+/* Submit Section */
+.submit-section {
+  background-color: #f5f5f5; /* BRITT CONSIDER: #e0e0e0 for contrast */
+  padding: 100px 80px;
+  display: flex;
+  justify-content: flex-start; /* left-aligned */
+  min-height: 600px;           
+}
+
+.submit-content {
+  max-width: 700px;            
+  text-align: left;
+}
+
+/* Section Title */
+.submit-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  font-family: 'Futura', sans-serif;
+}
+
+.submit-intro {
+  font-family: 'Oswald', sans-serif;   
+  font-size: 20px;                                  
+  line-height: 1.5;
+  
+}
+
+
+/* Labels */
+.submit-content label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Inputs and Textarea */
+.submit-content input,
+.submit-content select,
+.submit-content textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.submit-content .sub-label {
+  display: block;
+  font-size: 18px;        
+  font-weight: 300;       
+  color: #000000;            
+         
+  margin-bottom: 5px;     
+  font-family: 'Oswald', sans-serif;  
+}
+
+/* File input tweak */
+.submit-content input[type="file"] {
+  padding: 5px;
+}
+
+/* Submit button */
+.submit-content button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background-color: #1B9E9E;
+  color: #F4EDEA;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Oswald', sans-serif;
+}
+
+.submit-content button:hover {
+  background-color: #47D6CD;
+  color: #F4EDEA;
+}
+
+.submit-content button:active {
+  background-color: #085C6B;
+  color: #F4EDEA;
+}
+
+/* paragraph fallback */
+p {
+  font-family: 'Futura', sans-serif;
+  font-weight: 300;  /* light weight */
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;       
+}
+
+/* Instagram Grid */
+.follow-section {
+  background-color: #f5f5f5;
+  padding: 30px 80px;
+  font-family: 'Futura', sans-serif;
+}
+
+.follow-section h2 {
+  background-color: #f5f5f5;
+  padding: 30px;
+  font-family: 'Futura', sans-serif;
+  font-size: 36px;
+  text-align: left;
+}
+
+.follow-content {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  
+}
+
+.instagram-grid {
+  display: flex;
+  gap: 30px;   
+  justify-content: space-around;           
+}
+
+.instagram-media {
+  flex: 1;                 /* equal width */
+  min-width: 300px;        /* prevent shrinking */
+  max-width: 400px;        /* constrain size */
+  height: 480px;           
+  border: none;
+  overflow: hidden;
+  border-radius: 8px;      
+}
+
+/* Footer */
+.footer-pattern {
+  height: 100px;                 /* similar to trim */
+  width: 100%;
+  background-image: url('/assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;        
+  background-position: center; 
+  position: relative;  
+}
+
+.footer-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 48px; /* spacing from edges */
+  font-family: "Futura", sans-serif;
+}
+
+/* Privacy Policy link */
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Socials */
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+
+.footer-icons a {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+
+.footer-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-icons img:hover {
+    opacity: 0.8;
+}
+
+
+.footer-icons a.instagram {
+  width: 28px;
+  height: 28px;
+}
+
+.footer-icons a.tiktok {
+  width: 40px;
+  height: 40px;
+}
+
+/* All mobile responsiveness */
+
+@media (max-width: 900px) {
+  .header-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;       
+    padding-top: 80px;         
+    text-align: center;
+    min-height: 90vh;
+  }
+
+  .logo {
+    position: static;          
+    max-width: 100vw;           
+    margin-bottom: 20px;
+  }
+
+  .mission-statement {
+    position: static;          
+    width: 85%;
+    max-width: 500px;
+    font-size: 18pt;
+    transform: none;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 420px; 
+    height: auto;
+  }
+
+  .follow-section {
+    padding: 40px 20px;
+  }
+
+  .follow-section h2 {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .instagram-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+  }
+
+  .instagram-media {
+    width: 90%;      
+    min-width: unset; 
+    max-width: 400px; 
+    min-height: 600px;
+    
+  }
+  
+}
+
+
+
+
+
+
+

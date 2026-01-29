@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Wave Alternative</title>
+    <link rel="icon" type="image/png" href="assets/cd2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- <div class="submark">
+            <a href="index.html"><img src="assets/submark.png" alt="New Wave Alternative Submark"></a>
+        </div> -->
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#submit">SUBMIT</a></li>
+            <li><a href="#follow">FOLLOW</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header-section">
+        <img src="assets/crowd3.png" alt="Header Background" class="header-bg">
+        <div class="header-content">
+            <img src="assets/logo.png" alt="Logo" class="logo">
+            <p class="mission-statement">PROVIDING A SAFE SPACE FOR WOMEN IN THE ALTERNATIVE SCENE TO LEARN, CONNECT, AND GROW.</p>
+        </div>
+    </header>
+
+    <!-- Trim -->
+    <div class="header-trim">
+        <img src="assets/trim.png" alt="Checker Trim">
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+    <div class="about-content">
+        <h2>OUR STORY</h2>
+        <p>
+        Ever since I was a little girl, I’ve loved two things: music and helping people. Throughout my years in the music industry, I’ve noticed that the alternative scene not only lacked women, but lacked resources. From the fan-girl-to-industry pipeline: women run this industry. So let’s bring to light the “New Wave” of women in music!
+        <br><br> 
+        Here you’ll learn about photographers, managers, agents, artists, talent buyers, tour managers, merch sellers, entrepreneurs, and so much more. This will be a space for women in learn, connect, and grow. Call it: New Wave Alternative. 
+        <br><br>
+        <i>- Founder, Britt Hadaway</i>
+        </p>
+    </div>
+    <div class="about-image">
+        <img src="assets/about.png" alt="Britt">
+    </div>
+    </section>
+
+    <!-- Submit Section -->
+    <section id="submit" class="submit-section">
+    <div class="submit-content">
+        <h2>WANT TO BE FEATURED?</h2>
+        <p class="submit-intro">Fill out this quick and easy submission form and we will make sure to get back to you as soon as possible! <br> For all other inquiries, please contact britt@newwavealt.com</p>
+        <form id="submit-form" action="/submit" method="POST" enctype="multipart/form-data">
+        <!-- Name -->
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email -->
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Company (Optional) -->
+        <label for="company">COMPANY</label>
+        <span class="sub-label">(Optional)</span>
+        <input type="text" id="company" name="company">
+
+        <!-- On behalf of -->
+        <label for="on-behalf">ARE YOU SUBMITTING ON BEHALF OF YOURSELF OR SOMEONE ELSE?</label>
+        <input type="text" id="on-behalf" name="on-behalf">
+
+        <!-- Industry Role -->
+        <label for="industry">WHAT PART OF THE INDUSTRY ARE YOU?</label>
+        <span class="sub-label">Ex. Agent, Manager, Entrepreneur, Photographer, Journalist, Artist, Etc.</span>
+        <input type="text" id="industry" name="industry" required>
+
+        <!-- How did you hear -->
+        <label for="hear-about">HOW DID YOU HEAR ABOUT NEW WAVE ALTERNATIVE?</label>
+        <input type="text" id="hear-about" name="hear-about" required>
+
+        <!-- File Upload -->
+        <label for="file-upload">WORK TO BE SUBMITTED</label>
+        <span class="sub-label">(Optional, 5MB limit)</span>
+        <input type="file" id="file-upload" name="file-upload" accept=".jpg,.jpeg,.png,.gif,.mp4,.mov,.pdf">
+
+        <!-- URL (Optional) -->
+        <label for="url">URL</label>
+        <span class="sub-label">(Optional)</span>
+        <input type="text" id="url" name="url">
+
+        <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    </section>
+
+
+    <!-- Follow Section -->
+    <section id="follow" class="follow-section">
+        <h2>FOLLOW US ON INSTAGRAM</h2>
+        
+        <div class="instagram-grid">
+            <!-- Maggie Feature -->
+            <blockquote class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DSYCKMXEfAp/"
+                data-instgrm-version="14">
+            </blockquote>
+            
+            <!-- Brandy Feature -->
+            <!-- <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DS5L4SqlOtD/"
+                data-instgrm-version="14">
+            </blockquote>  -->
+            
+            <!-- Crave Feature -->
+            <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DTdV2Ehj5P8/"
+                data-instgrm-version="14">
+            </blockquote>
+
+            <!-- Kelsey Feature -->
+             <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/p/DT3TcWSkn-K/"
+                data-instgrm-version="14">
+            </blockquote>
+            
+        </div>
+    </section>
+
+    
+    <!-- Footer Trim -->
+    <div class="header-trim">
+        <img src="assets/trim.png" alt="Checker Trim">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-pattern">
+        <div class="footer-content">
+            <a href="/privacy_policy.html" class="footer-link">PRIVACY POLICY</a>
+
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/newwavealt/"
+                    class="instagram"
+                    aria-label="Instagram">
+                    <img src="/assets/instagram.webp" alt="">
+                </a>
+
+                <a href="https://www.tiktok.com/@newwavealt"
+                    class="tiktok"
+                    aria-label="TikTok">
+                    <img src="/assets/tiktok.webp" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+
+    <script async src="https://www.instagram.com/embed.js"></script>
+
+</body>
+</html>
+
+
