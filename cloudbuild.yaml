@@ -4,7 +4,7 @@ steps:
     args:
       [
         'build',
-        '-t', 'gcr.io/$PROJECT_ID/newwave-server:$SHORT_SHA',
+        '-t', 'gcr.io/$PROJECT_ID/newwavealt:$SHORT_SHA',
         '.'
       ]
 
@@ -13,7 +13,7 @@ steps:
     args:
       [
         'push',
-        'gcr.io/$PROJECT_ID/newwave-server:$SHORT_SHA'
+        'gcr.io/$PROJECT_ID/newwavealt:$SHORT_SHA'
       ]
 
   # Deploy to Cloud Run
@@ -21,8 +21,8 @@ steps:
     entrypoint: gcloud
     args:
       [
-        'run', 'deploy', 'newwave-server',
-        '--image', 'gcr.io/$PROJECT_ID/newwave-server:$SHORT_SHA',
+        'run', 'deploy', 'newwavealt',
+        '--image', 'gcr.io/$PROJECT_ID/newwavealt:$SHORT_SHA',
         '--platform', 'managed',
         '--region', 'us-west1',
         '--allow-unauthenticated',
@@ -30,4 +30,4 @@ steps:
       ]
 
 images:
-  - 'gcr.io/$PROJECT_ID/newwave-server:$SHORT_SHA'
+  - 'gcr.io/$PROJECT_ID/newwavealt:$SHORT_SHA'
