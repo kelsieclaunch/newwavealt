@@ -315,7 +315,7 @@ p {
   flex: 1;                 /* equal width */
   min-width: 300px;        /* prevent shrinking */
   max-width: 400px;        /* constrain size */
-  height: 480px;           
+  height: 500px;           
   border: none;
   overflow: hidden;
   border-radius: 8px;      
