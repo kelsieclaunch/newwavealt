@@ -468,6 +468,35 @@ p {
     min-height: 600px;
     
   }
+
+  .submit-section {
+    padding: 60px 20px;          /* the main issue from desktop to mobile here was the padding */
+    justify-content: center;     
+    min-height: auto;
+  }
+
+  .submit-content {
+    max-width: 100%;             
+    width: 100%;
+    text-align: left;
+  }
+
+  .submit-content h2 {
+    font-size: 28px;             
+    text-align: center;
+  }
+
+  .submit-intro {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  
+  .submit-content input,
+  .submit-content select,
+  .submit-content textarea {
+    font-size: 16px;
+  }
   
 }
 
