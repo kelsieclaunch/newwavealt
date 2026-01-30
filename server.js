@@ -62,7 +62,7 @@ app.post('/submit', submitLimiter, upload.single('file-upload'), async (req, res
 
   const mailOptions = {
     from: `"New Wave Alt" <no-reply@newwavealt.com>`,
-    to: process.env.GMAIL_USER,
+    to: [process.env.GMAIL_USER, 'britt@newwavealt.com'],
     subject: `New Submission: ${name}`,
     text: `
 Name: ${name}
