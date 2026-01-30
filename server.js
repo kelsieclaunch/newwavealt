@@ -4,6 +4,7 @@ import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import rateLimit from 'express-rate-limit';
 
 // Setup __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -13,6 +14,13 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+
+const submitLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 30, // per IP
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 
 // Serve static files from /public
 app.use(express.static(path.join(__dirname, 'public')));
@@ -33,12 +41,27 @@ const transporter = nodemailer.createTransport({
 });
 
 // Handle form submission
-app.post('/submit', upload.single('file-upload'), async (req, res) => {
-  const { name, email, company, 'on-behalf': onBehalf, industry, 'hear-about': hearAbout, url } = req.body;
+app.post('/submit', submitLimiter, upload.single('file-upload'), async (req, res) => {
+  // Honeypot spam check
+  if (req.body.website) {
+    return res.status(200).send('Thanks!');
+  }
+
+  const sanitize = (value, max = 300) =>
+    typeof value === 'string' ? value.slice(0, max).trim() : '';
+  const name = sanitize(req.body.name, 100);
+  const email = sanitize(req.body.email, 200);
+  const company = sanitize(req.body.company, 200);
+  const onBehalf = sanitize(req.body['on-behalf'], 200);
+  const industry = sanitize(req.body.industry, 200);
+  const hearAbout = sanitize(req.body['hear-about'], 300);
+  const url = sanitize(req.body.url, 300);
+
   const file = req.file;
 
+
   const mailOptions = {
-    from: `"New Wave Alt" <${process.env.GMAIL_USER}>`,
+    from: `"New Wave Alt" <no-reply@newwavealt.com>`,
     to: process.env.GMAIL_USER,
     subject: `New Submission: ${name}`,
     text: `
@@ -53,11 +76,12 @@ URL: ${url || 'N/A'}
     attachments: file
       ? [
           {
-            filename: file.originalname,
+            filename: `submission-${Date.now()}${path.extname(file.originalname)}`,
             content: file.buffer,
           },
         ]
       : [],
+
   };
 
   try {
