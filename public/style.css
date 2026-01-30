@@ -419,7 +419,7 @@ p {
     position: static;          
     width: 85%;
     max-width: 500px;
-    font-size: 18pt;
+    font-size: 16pt;
     transform: none;
   }
 
@@ -453,6 +453,7 @@ p {
   .follow-section h2 {
     text-align: center;
     padding: 20px 0;
+    font-size: 28px;
   }
 
   .instagram-grid {
