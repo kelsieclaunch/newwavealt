@@ -47,7 +47,7 @@ app.post('/submit', submitLimiter, upload.single('file-upload'), async (req, res
     return res.status(200).send('Thanks!');
   }
 
-  const sanitize = (value, max = 300) =>
+  const sanitize = (value, max = 1000) =>
     typeof value === 'string' ? value.slice(0, max).trim() : '';
   const name = sanitize(req.body.name, 100);
   const email = sanitize(req.body.email, 200);
@@ -56,6 +56,7 @@ app.post('/submit', submitLimiter, upload.single('file-upload'), async (req, res
   const industry = sanitize(req.body.industry, 200);
   const hearAbout = sanitize(req.body['hear-about'], 300);
   const url = sanitize(req.body.url, 300);
+  const additionalInfo = sanitize(req.body['additional-info'], 1000);
 
   const file = req.file;
 
@@ -72,6 +73,7 @@ Submitted on behalf of: ${onBehalf}
 Industry role: ${industry}
 How they heard about New Wave Alt: ${hearAbout}
 URL: ${url || 'N/A'}
+Additional Info: ${additionalInfo || 'N/A'}
     `,
     attachments: file
       ? [
