@@ -403,7 +403,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;   
-    align-items: center;       
+    align-items: left;       
     padding-top: 80px;         
     text-align: center;
     min-height: 90vh;
@@ -426,12 +426,12 @@ p {
   .about-section {
     flex-direction: column;
     padding: 80px 20px;
-    text-align: center;
+    text-align: left;
   }
 
   .about-content {
     max-width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .about-image {
@@ -451,7 +451,7 @@ p {
   }
 
   .follow-section h2 {
-    text-align: center;
+    text-align: left;
     padding: 20px 0;
     font-size: 28px;
   }
@@ -472,7 +472,7 @@ p {
 
   .submit-section {
     padding: 60px 20px;          /* the main issue from desktop to mobile here was the padding */
-    justify-content: center;     
+    justify-content: left;     
     min-height: auto;
   }
 
@@ -484,12 +484,12 @@ p {
 
   .submit-content h2 {
     font-size: 28px;             
-    text-align: center;
+    text-align: left;
   }
 
   .submit-intro {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
   }
 
   
