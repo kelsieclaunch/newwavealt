@@ -421,8 +421,8 @@ p {
 
   .mission-statement {
     position: static;          
-    width: 85%;
-    max-width: 500px;
+    width: 95%;
+    max-width: 600px;
     font-size: 1rem;
     transform: none;
     text-align: left;
