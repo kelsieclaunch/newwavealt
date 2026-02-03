@@ -405,9 +405,9 @@ p {
     inset: unset;
     display: flex;
     flex-direction: column;
-    justify-content: center;     /* vertical centering */
+    justify-content: flex-start;     /* vertical centering */
     align-items: center;     
-    padding: 100px 20px 80px;    /* top | sides | bottom */
+    padding: 120px 20px 60px;
     gap: 24px;
     height: auto;
     min-height: 100vh; 
@@ -423,10 +423,10 @@ p {
     position: static;          
     width: 85%;
     max-width: 500px;
-    font-size: 14pt;
+    font-size: 0.95rem;
     transform: none;
     text-align: left;
-    margin-bottom: 60px;
+    margin-bottom: 32px;
   }
 
   .header-trim img {
@@ -449,11 +449,11 @@ p {
   }
 
   .about-content p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .about-content h2 {
-    font-size: 28px;
+    font-size: 26px;
     text-align: left;
   }
 
@@ -476,7 +476,7 @@ p {
   .follow-section h2 {
     text-align: left;
     padding: 20px 0;
-    font-size: 28px;
+    font-size: 26px;
     max-width: 100%;
   }
 
@@ -508,13 +508,13 @@ p {
   }
 
   .submit-content h2 {
-    font-size: 28px;             
+    font-size: 26px;             
     text-align: left;
     max-width: 100%;
   }
 
   .submit-intro {
-    font-size: 20px;
+    font-size: 18px;
     text-align: left;
   }
 
@@ -522,7 +522,7 @@ p {
   .submit-content input,
   .submit-content select,
   .submit-content textarea {
-    font-size: 20px;
+    font-size: 18px;
   }
   
 }
