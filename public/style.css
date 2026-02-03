@@ -187,7 +187,8 @@ section {
   display: flex;
   justify-content: flex-start; /* left-aligned */
   min-height: 600px;    
-  padding-top: 0px;       
+  padding-top: 0px; 
+  padding-bottom: 40px;      
 }
 
 .submit-content {
@@ -499,7 +500,6 @@ p {
     justify-content: left;     
     min-height: auto;
     padding-top: 30px;
-    padding-bottom: 30px;
   }
 
   .submit-content {
