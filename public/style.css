@@ -398,21 +398,22 @@ p {
 
 @media (max-width: 900px) {
   .header-content {
-    position: absolute;
-    inset: 0;
+    position: relative;          
+    inset: unset;
     display: flex;
     flex-direction: column;
-    justify-content: left;   
-    align-items: left;       
-    padding-top: 80px;         
-    text-align: left;
-    min-height: 90vh;
+    justify-content: center;     /* vertical centering */
+    align-items: flex-start;     /* left aligned */
+    padding: 120px 20px 40px;    /* top | sides | bottom */
+    gap: 24px;
+    height: auto;
+    min-height: 100vh; 
   }
 
   .logo {
-    position: static;          
-    max-width: 120vw;           
-    margin-bottom: 20px;
+    width: clamp(320px, 85vw, 520px);
+    max-width: 100%;
+    margin-bottom: 10px;
   }
 
   .mission-statement {
@@ -422,6 +423,11 @@ p {
     font-size: 14pt;
     transform: none;
     text-align: left;
+  }
+
+  .header-trim img {
+    height: 140px;       
+    object-fit: cover;
   }
 
   .about-section {
