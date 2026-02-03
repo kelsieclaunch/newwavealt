@@ -74,13 +74,14 @@ body {
 }
 
 .header-content {
-  position: relative;
+  position: absolute;      
+  bottom: 40px;                
+  left: 6%;                 
+  right: 6%;
   display: flex;
-  flex-direction: column;       /* stack logo + mission vertically */
-  justify-content: flex-start;  /* start from top */
-  align-items: flex-start;      /* left-align */
-  padding: 60px 6% 40px;        /* top | sides | bottom */
-  gap: 20px;                    /* space between logo and mission statement */
+  justify-content: flex-start; /* left align */
+  align-items: flex-end;      
+  gap: 20px;                   
   z-index: 1;
 }
 
@@ -400,15 +401,17 @@ p {
 /* All mobile responsiveness */
 
 @media (max-width: 900px) {
+  
   .header-content {
-    flex-direction: column;
-    justify-content: flex-start;  
-    align-items: center;          
-    padding: 40px 20px 60px;      
-    gap: 16px;                     
-    height: auto;
-    min-height: 100vh; 
+    position: absolute;      
+    bottom: 40px;            
+    left: 20px;
+    right: 20px;
+    flex-direction: column;  
+    align-items: center;
+    gap: 16px;
   }
+  
 
   .logo {
     width: clamp(320px, 85vw, 520px);
