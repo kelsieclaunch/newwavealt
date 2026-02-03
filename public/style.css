@@ -426,7 +426,7 @@ p {
   }
 
   .header-trim img {
-    height: 140px;       
+    height: 80px;       
     object-fit: cover;
   }
 
@@ -439,11 +439,14 @@ p {
   .about-content {
     max-width: 100%;
     text-align: left;
+  }
+
+  .about-content p {
     font-size: 16px;
   }
 
   .about-content h2 {
-    font-size: 28px;
+    font-size: 32px;
     text-align: left;
   }
 
@@ -467,6 +470,7 @@ p {
     text-align: left;
     padding: 20px 0;
     font-size: 28px;
+    max-width: 100%;
   }
 
   .instagram-grid {
@@ -498,6 +502,7 @@ p {
   .submit-content h2 {
     font-size: 28px;             
     text-align: left;
+    max-width: 100%;
   }
 
   .submit-intro {
