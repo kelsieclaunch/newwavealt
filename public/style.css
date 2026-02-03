@@ -79,7 +79,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0px 6% 8%;
+  padding: 120px 6% 160px;
   gap: 40px;
   z-index: 1;
   top: 50%;
@@ -406,7 +406,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;     /* vertical centering */
-    align-items: flex-start;     /* left aligned */
+    align-items: center;     
     padding: 100px 20px 80px;    /* top | sides | bottom */
     gap: 24px;
     height: auto;
@@ -426,7 +426,7 @@ p {
     font-size: 14pt;
     transform: none;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   .header-trim img {
@@ -470,7 +470,7 @@ p {
   }
 
   .follow-section {
-    padding-top: 30px;
+    padding: 30px 10px;
   }
 
   .follow-section h2 {
