@@ -188,7 +188,7 @@ section {
   justify-content: flex-start; /* left-aligned */
   min-height: 600px;    
   padding-top: 0px; 
-  padding-bottom: 40px;      
+  padding-bottom: 50px;      
 }
 
 .submit-content {
@@ -476,9 +476,11 @@ p {
 
   .follow-section h2 {
     text-align: left;
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 26px;
     max-width: 100%;
+    padding-left: 2px;
   }
 
   .instagram-grid {
