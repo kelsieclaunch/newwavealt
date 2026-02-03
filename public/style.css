@@ -75,7 +75,7 @@ body {
 
 .header-content {
   position: absolute;      
-  bottom: 40px;                
+  bottom: 30px;                
   left: 6%;                 
   right: 6%;
   display: flex;
@@ -89,7 +89,7 @@ body {
   position: static;
   width: clamp(280px, 40vw, 600px);
   max-width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   margin-top: 0px;
 }
 
@@ -106,7 +106,7 @@ body {
   text-align: left;          
   display: flex;
   align-items: center; 
-  padding-bottom: 40px;    
+  padding-bottom: 30px;    
 }
 
 /* Sections */
@@ -142,7 +142,7 @@ section {
   font-size: 36px;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   letter-spacing: 2px;
 }
 
@@ -499,6 +499,7 @@ p {
     justify-content: left;     
     min-height: auto;
     padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .submit-content {
