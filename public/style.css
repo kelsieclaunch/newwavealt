@@ -411,7 +411,7 @@ p {
 
   .logo {
     position: static;          
-    max-width: 100vw;           
+    max-width: 120vw;           
     margin-bottom: 20px;
   }
 
@@ -419,7 +419,7 @@ p {
     position: static;          
     width: 85%;
     max-width: 500px;
-    font-size: 16pt;
+    font-size: 14pt;
     transform: none;
   }
 
@@ -431,6 +431,11 @@ p {
 
   .about-content {
     max-width: 100%;
+    text-align: left;
+  }
+
+  .about-content h2 {
+    font-size: 28px;
     text-align: left;
   }
 
