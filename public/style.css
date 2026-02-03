@@ -111,8 +111,6 @@ body {
 
 /* Sections */
 section {
-  padding: 100px 20px;
-  text-align: center;
   scroll-margin-top: 60px; 
 }
 
@@ -127,9 +125,11 @@ section {
   display: flex;
   justify-content: space-between; /* text left, image right */
   align-items: center;
-  padding: 100px 80px;
+  /* padding: 100px 80px; */
   background-color: #f5f5f5;
   gap: 40px; /* space between text and image */
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* Text column */
@@ -184,10 +184,11 @@ section {
 /* Submit Section */
 .submit-section {
   background-color: #f5f5f5; /* BRITT CONSIDER: #e0e0e0 for contrast */
-  padding: 100px 80px;
+  /* padding: 100px 80px; */
   display: flex;
   justify-content: flex-start; /* left-aligned */
-  min-height: 600px;           
+  min-height: 600px;    
+  padding-top: 60px;       
 }
 
 .submit-content {
@@ -252,7 +253,7 @@ section {
 
 /* Submit button */
 .submit-content button {
-  margin-top: 25px;
+  margin-top: 16px;
   padding: 12px 25px;
   background-color: #1B9E9E;
   color: #F4EDEA;
@@ -286,8 +287,9 @@ p {
 /* Instagram Grid */
 .follow-section {
   background-color: #f5f5f5;
-  padding: 30px 80px;
+  /* padding: 30px 80px; */
   font-family: 'Futura', sans-serif;
+  padding-top: 40px;
 }
 
 .follow-section h2 {
@@ -404,7 +406,7 @@ p {
     flex-direction: column;
     justify-content: center;     /* vertical centering */
     align-items: flex-start;     /* left aligned */
-    padding: 120px 20px 40px;    /* top | sides | bottom */
+    padding: 100px 20px 80px;    /* top | sides | bottom */
     gap: 24px;
     height: auto;
     min-height: 100vh; 
@@ -429,12 +431,15 @@ p {
   .header-trim img {
     height: 40px;       
     object-fit: cover;
+    display: block;
   }
 
   .about-section {
     flex-direction: column;
-    padding: 80px 20px;
+    /* padding: 80px 20px; */
     text-align: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .about-content {
@@ -443,7 +448,7 @@ p {
   }
 
   .about-content p {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .about-content h2 {
@@ -464,7 +469,7 @@ p {
   }
 
   .follow-section {
-    padding: 40px 20px;
+    padding-top: 30px;
   }
 
   .follow-section h2 {
@@ -489,9 +494,10 @@ p {
   }
 
   .submit-section {
-    padding: 60px 20px;          /* the main issue from desktop to mobile here was the padding */
+    /* padding: 40px 20px;          the main issue from desktop to mobile here was the padding */
     justify-content: left;     
     min-height: auto;
+    padding-top: 40px;
   }
 
   .submit-content {
@@ -507,7 +513,7 @@ p {
   }
 
   .submit-intro {
-    font-size: 24px;
+    font-size: 20px;
     text-align: left;
   }
 
@@ -515,7 +521,7 @@ p {
   .submit-content input,
   .submit-content select,
   .submit-content textarea {
-    font-size: 18px;
+    font-size: 20px;
   }
   
 }
