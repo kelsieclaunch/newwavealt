@@ -79,7 +79,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 120px 6% 100px;
+  padding: 100px 6% 80px;
   gap: 40px;
   z-index: 1;
 }
@@ -407,7 +407,7 @@ p {
     flex-direction: column;
     justify-content: flex-start;     /* vertical centering */
     align-items: center;     
-    padding: 120px 20px 60px;
+    padding: 80px 20px 60px;
     gap: 24px;
     height: auto;
     min-height: 100vh; 
@@ -423,10 +423,10 @@ p {
     position: static;          
     width: 85%;
     max-width: 500px;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     transform: none;
     text-align: left;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
   .header-trim img {
@@ -508,13 +508,13 @@ p {
   }
 
   .submit-content h2 {
-    font-size: 26px;             
+    font-size: 24px;             
     text-align: left;
     max-width: 100%;
   }
 
   .submit-intro {
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
   }
 
