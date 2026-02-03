@@ -187,7 +187,7 @@ section {
   display: flex;
   justify-content: flex-start; /* left-aligned */
   min-height: 600px;    
-  padding-top: 40px;       
+  padding-top: 0px;       
 }
 
 .submit-content {
@@ -404,7 +404,7 @@ p {
   
   .header-content {
     position: absolute;      
-    bottom: 40px;            
+    bottom: 10px;            
     left: 20px;
     right: 20px;
     flex-direction: column;  
@@ -416,7 +416,7 @@ p {
   .logo {
     width: clamp(320px, 85vw, 520px);
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .mission-statement {
@@ -430,7 +430,7 @@ p {
   }
 
   .header-trim img {
-    height: 40px;       
+    height: 60px;       
     object-fit: cover;
     display: block;
   }
@@ -460,7 +460,7 @@ p {
   .about-image {
     max-width: 100%;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 30px;
   }
 
   .about-image img {
@@ -498,7 +498,7 @@ p {
     /* padding: 40px 20px;          the main issue from desktop to mobile here was the padding */
     justify-content: left;     
     min-height: auto;
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
   .submit-content {
@@ -508,13 +508,13 @@ p {
   }
 
   .submit-content h2 {
-    font-size: 25px;             
+    font-size: 24.5px;             
     text-align: left;
     max-width: 100%;
   }
 
   .submit-intro {
-    font-size: 17px;
+    font-size: 17.5px;
     text-align: left;
   }
 
