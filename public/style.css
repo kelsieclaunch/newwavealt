@@ -402,10 +402,10 @@ p {
     inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;   
+    justify-content: left;   
     align-items: left;       
     padding-top: 80px;         
-    text-align: center;
+    text-align: left;
     min-height: 90vh;
   }
 
@@ -421,6 +421,7 @@ p {
     max-width: 500px;
     font-size: 14pt;
     transform: none;
+    text-align: left;
   }
 
   .about-section {
@@ -432,6 +433,7 @@ p {
   .about-content {
     max-width: 100%;
     text-align: left;
+    font-size: 16px;
   }
 
   .about-content h2 {
@@ -493,7 +495,7 @@ p {
   }
 
   .submit-intro {
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
   }
 
@@ -501,7 +503,7 @@ p {
   .submit-content input,
   .submit-content select,
   .submit-content textarea {
-    font-size: 16px;
+    font-size: 18px;
   }
   
 }
