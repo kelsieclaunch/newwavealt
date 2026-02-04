@@ -279,13 +279,13 @@ section {
 }
 
 /* paragraph fallback */
-/* p {
+p {
   font-family: 'Futura', sans-serif;
   font-weight: 300; 
   font-size: 18px;
   line-height: 1.5;
   color: #333;       
-} */
+}
 
 /* Instagram Grid */
 .follow-section {
@@ -531,6 +531,10 @@ section {
   .submit-content select,
   .submit-content textarea {
     font-size: 17px;
+  }
+
+  .footer-content {
+    padding: 0 20px;
   }
   
 }
