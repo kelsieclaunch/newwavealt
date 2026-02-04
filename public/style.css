@@ -128,6 +128,7 @@ section {
   gap: 40px; /* space between text and image */
   padding-top: 40px;
   padding-bottom: 60px;
+  padding-left: 30px;
 }
 
 /* Text column */
@@ -188,7 +189,8 @@ section {
   justify-content: flex-start; /* left-aligned */
   min-height: 600px;    
   padding-top: 0px; 
-  padding-bottom: 50px;      
+  padding-bottom: 50px;  
+  padding-left: 30px;    
 }
 
 .submit-content {
@@ -277,13 +279,13 @@ section {
 }
 
 /* paragraph fallback */
-p {
+/* p {
   font-family: 'Futura', sans-serif;
-  font-weight: 300;  /* light weight */
+  font-weight: 300; 
   font-size: 18px;
   line-height: 1.5;
   color: #333;       
-}
+} */
 
 /* Instagram Grid */
 .follow-section {
