@@ -252,8 +252,8 @@ section p {
   display: block;
   font-size: 18px;        
   font-weight: 300;       
-  color: #000000;            
-         
+  color: #000000; 
+  margin-top: 0px;              
   margin-bottom: 2px;     
   font-family: 'Oswald', sans-serif;  
 }
@@ -316,6 +316,7 @@ p {
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: 2px;
+  padding-bottom: 20px;
 }
 
 .follow-content {
@@ -474,6 +475,7 @@ p {
   .about-content h2 {
     font-size: 26px;
     text-align: left;
+    padding-bottom: 6px;
   }
 
   .about-image {
@@ -494,8 +496,8 @@ p {
 
   .follow-header h2 {
     text-align: left;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 12px;
+    padding-bottom: 6px;
     font-size: 26px;
     max-width: 100%;
     padding-left: 10px;
@@ -533,11 +535,13 @@ p {
     font-size: 24.5px;             
     text-align: left;
     max-width: 100%;
+    margin-bottom: 6px;
   }
 
   .submit-intro {
     font-size: 17.5px;
     text-align: left;
+    margin-top: 0px;
   }
 
   
