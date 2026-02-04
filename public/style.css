@@ -450,7 +450,7 @@ p {
     text-align: left;
     padding-top: 60px;
     padding-bottom: 40px;
-    padding-left: 10px;
+    padding-left: 20px;
   }
 
   .about-content {
@@ -511,7 +511,7 @@ p {
     justify-content: left;     
     min-height: auto;
     padding-top: 30px;
-    padding-left: 10px;
+    padding-left: 20px;
   }
 
   .submit-content {
