@@ -297,7 +297,7 @@ p {
   
 }
 
-.follow-header {
+.follow-header h2 {
   background-color: #f5f5f5;
   font-family: 'Futura', sans-serif;
   font-size: 36px;
@@ -307,7 +307,6 @@ p {
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: 2px;
-  max-width: 400px;
 }
 
 .follow-content {
@@ -484,7 +483,7 @@ p {
     padding: 30px 10px;
   }
 
-  .follow-header {
+  .follow-header h2 {
     text-align: left;
     padding-top: 20px;
     padding-bottom: 20px;
