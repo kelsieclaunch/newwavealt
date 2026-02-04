@@ -116,6 +116,15 @@ section {
   padding-right: 20px;
 }
 
+section h2 {
+  margin-bottom: 8px; 
+}
+
+section p {
+  margin-top: 0;
+}
+
+
 
 
 /* About Section */
@@ -220,7 +229,7 @@ section {
 .submit-content label {
   display: block;
   margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   font-weight: 500;
   font-size: 20px;
   font-family: 'Oswald', sans-serif;
@@ -245,18 +254,18 @@ section {
   font-weight: 300;       
   color: #000000;            
          
-  margin-bottom: 5px;     
+  margin-bottom: 2px;     
   font-family: 'Oswald', sans-serif;  
 }
 
 /* File input tweak */
 .submit-content input[type="file"] {
-  padding: 5px;
+  padding: 2px;
 }
 
 /* Submit button */
 .submit-content button {
-  margin-top: 16px;
+  margin-top: 14px;
   padding: 12px 25px;
   background-color: #1B9E9E;
   color: #F4EDEA;
