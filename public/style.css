@@ -328,7 +328,9 @@ section {
 .instagram-grid {
   display: flex;  
   justify-content: space-evenly; 
-  gap: 30px;           
+  gap: 30px; 
+  
+  margin-top: 0px;
 }
 
 .instagram-media {
