@@ -6,7 +6,7 @@ body {
 
 h2 {
   margin-top: 0;
-  margin-bottom: 4px; 
+  margin-bottom: 2px; 
 
   font-family: 'Futura', sans-serif;
   font-size: 36px;
@@ -316,6 +316,7 @@ section {
 
 .follow-header h2{
   padding-left: 40px;
+  margin-bottom: 4px;
 }
 
 .follow-content {
