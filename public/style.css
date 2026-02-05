@@ -6,7 +6,7 @@ body {
 
 h2 {
   margin-top: 0;
-  margin-bottom: 10px; 
+  margin-bottom: 0px; 
 
   font-family: 'Futura', sans-serif;
   font-size: 36px;
@@ -168,6 +168,8 @@ section {
 .about-content {
   max-width: 50%;       /* takes up roughly half the section */
 
+  margin-top: 0px;
+
   text-align: left;
 }
 
@@ -217,6 +219,8 @@ section {
 
 .submit-content {
   max-width: 700px; 
+
+  margin-top: 0px;
 
   text-align: left;
 }
@@ -505,33 +509,7 @@ section {
     height: auto;
   }
 
-  .follow-section {
-    padding: 30px 10px;
-  }
-
-  .follow-header h2 {
-    max-width: 100%;
-    padding-top: 12px;
-    padding-left: 10px;
-
-    font-size: 26px;
-    text-align: left; 
-  }
-
-  .instagram-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; 
-  }
-
-  .instagram-media {
-    width: 90%;      
-    min-width: unset; 
-    max-width: 400px; 
-    min-height: 600px;
-  }
-
-  .submit-section {
+    .submit-section {
     justify-content: left; 
 
     min-height: auto;
@@ -566,6 +544,32 @@ section {
   .submit-content textarea {
     font-size: 17px;
     padding-top: 2px;
+  }
+
+  .follow-section {
+    padding: 30px 10px;
+  }
+
+  .follow-header h2 {
+    max-width: 100%;
+    padding-top: 12px;
+    padding-left: 10px;
+
+    font-size: 26px;
+    text-align: left; 
+  }
+
+  .instagram-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+  }
+
+  .instagram-media {
+    width: 90%;      
+    min-width: unset; 
+    max-width: 400px; 
+    min-height: 600px;
   }
 
   .footer-content {
