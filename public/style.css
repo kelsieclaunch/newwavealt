@@ -311,7 +311,7 @@ section {
 }
 
 .follow-header h2{
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
 .follow-content {
@@ -486,8 +486,7 @@ section {
   }
 
   .about-content h2 {
-    padding-bottom: 6px;
-
+    
     font-size: 26px;
     text-align: left;
     
@@ -513,7 +512,6 @@ section {
   .follow-header h2 {
     max-width: 100%;
     padding-top: 12px;
-    padding-bottom: 6px;
     padding-left: 10px;
 
     font-size: 26px;
@@ -549,9 +547,7 @@ section {
   }
 
   .submit-content h2 {
-  
     max-width: 100%;
-    margin-bottom: 6px;
 
     font-size: 24.5px;             
     text-align: left;
