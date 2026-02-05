@@ -310,20 +310,9 @@ section {
   font-family: 'Futura', sans-serif;
 }
 
-/* .follow-header h2 {
-  margin-top: 0;
+.follow-header h2{
   padding-left: 30px;
-  padding-bottom: 20px;
-
-  background-color: #f5f5f5;
-
-  
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: 2px;
-  text-align: left; 
-} */
+}
 
 .follow-content {
   max-width: 1200px;
