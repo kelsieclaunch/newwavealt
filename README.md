@@ -16,10 +16,10 @@ New Wave Alternative is a women's music collective designed to highlight women w
 
 ## Screenshots
 #### Desktop Version
-<img src="assets/header_screenshot.png" width="600" alt="Header for New Wave Alt website containing the logo, mission statement, and a photo taken by the founder">
+<img src="public/assets/header_screenshot.png" width="600" alt="Header for New Wave Alt website containing the logo, mission statement, and a photo taken by the founder">
 
 #### Mobile Version
-<img src="assets/header_mobile.png" width="200">
+<img src="public/assets/header_mobile.png" width="200">
 
 ### Future Enhancement
 - Information about networking events hosted by New Wave Alt
