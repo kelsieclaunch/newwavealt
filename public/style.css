@@ -482,6 +482,11 @@ section {
   height: 40px;
 }
 
+.footer-icons a.spotify {
+  width: 28px;
+  height: 28px;
+}
+
 
 
 /* All mobile responsiveness */
