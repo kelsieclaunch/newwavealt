@@ -404,6 +404,10 @@ section {
   overflow: hidden;
 }
 
+.instagram-item {
+  display: contents;
+}
+
 /* Footer */
 .footer-pattern {
   position: relative; 
