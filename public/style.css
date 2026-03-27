@@ -587,7 +587,7 @@ section {
 
 /* All mobile responsiveness */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   
   .header-content {
     position: absolute;
