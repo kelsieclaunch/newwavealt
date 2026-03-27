@@ -306,9 +306,9 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  max-width: 250px; 
-  padding-left: 10px;
-  padding-right: 10px;      
+  max-width: 225px; 
+  padding-left: 15px;
+  padding-right: 15px;      
     
 }
 
