@@ -19,7 +19,7 @@ p {
   margin-top: 0;
 
   color: #333;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300; 
   line-height: 1.5;
   text-align: left;       
@@ -349,7 +349,7 @@ section {
 
 .submit-intro {
   font-family: 'Oswald', sans-serif;   
-  font-size: 18px;                                  
+  font-size: 17px;                                  
   line-height: 1.5; 
 }
 
@@ -362,7 +362,7 @@ section {
   margin-bottom: 0px;
 
   font-weight: 500;
-  font-size: 18px;
+  font-size: 17px;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -652,7 +652,7 @@ section {
   }
 
   .about-content p {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .about-content h2 {
@@ -693,7 +693,7 @@ section {
   }
 
   .values-about p {
-    font-size: 18px;
+    font-size: 17px;
     text-align: left;
   }
 
