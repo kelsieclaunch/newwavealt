@@ -584,13 +584,24 @@ section {
     gap: 16px;
   }
 
-  .navbar ul li {
-    margin: 0 2px; 
+  .navbar {
+    justify-content: center; 
   }
 
+  .navbar ul {
+    justify-content: center;
+    flex-wrap: wrap;        
+    padding-right: 0;       
+    gap: 10px;             
+  }
+
+  .navbar ul li {
+    margin: 0;              
+  }
 
   .navbar ul li a {
-    font-size: 20px; 
+    font-size: 18px;        
+    white-space: nowrap;    
   }
   
 
@@ -661,8 +672,11 @@ section {
     height: auto;
   }
 
-  .values-section{
-    max-width: 85%;
+  .values-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .values-about {
