@@ -695,32 +695,28 @@ section {
   }
 
   .values-grid {
-    display: flex;
-    flex-direction: row;  
+    flex-direction: column;  /* stack items vertically */
     gap: 20px;
-    align-items: flex-start;  
-    flex-wrap: wrap;       
   }
 
   .values-item {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    max-width: 30%;          
+    flex-direction: row;      
+    align-items: center;      
+    gap: 16px;
+    width: 100%;
   }
 
 
   .values-item img {
-    height: 200px;           
-    width: auto;             
-    display: block;
+    height: 200px;            /* fixed height for visual consistency */
+    width: auto;              /* maintain aspect ratio */
+    flex-shrink: 0;           /* prevent shrinking */
   }
 
-  .values-text {
-    flex: 1;                   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .values-item .values-text {
+    flex: 1;
+    margin-left: 20px;        
   }
 
   .values-text p{
