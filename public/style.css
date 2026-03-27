@@ -702,25 +702,23 @@ section {
   }
 
   .values-item {
-    flex-direction: row;      
-    align-items: center;       
+    flex-direction: row;
+    align-items: center;
     gap: 16px;
 
     width: 100%;
-    max-width: none;
-    min-width: 0;
+    max-width: 700px; 
   }
 
   .values-item img {
-    flex: 0 0 auto;           
-    height: auto;
-    max-height: 100%;         
-    width: auto;              
+    flex: 0 0 30%;       
+    max-width: 100%;
+    height: auto;        
     object-fit: contain;
   }
 
   .values-text {
-    flex: 1.2;
+    flex: 1;
     padding-right: 10px;
   }
 
