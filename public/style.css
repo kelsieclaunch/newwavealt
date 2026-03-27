@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: 'Oswald', sans-serif;
+  background-color: #f5f5f5;
 }
 
 h2 {
@@ -274,6 +275,7 @@ section {
   padding-right: 40px;
 
   background-color: #f5f5f5;
+  object-fit: contain;
 }
 .values-content {
   display: flex;
@@ -307,8 +309,8 @@ section {
   align-items: center;
   text-align: left;
   max-width: 230px; 
-  padding-left: 15px;
-  padding-right: 15px;      
+  padding-left: 10px;
+  padding-right: 10px;      
     
 }
 
