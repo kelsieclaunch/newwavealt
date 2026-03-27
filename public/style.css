@@ -703,7 +703,7 @@ section {
 
   .values-item {
     flex-direction: row;      
-    align-items: center; 
+    align-items: center;       
     gap: 16px;
 
     width: 100%;
@@ -712,15 +712,15 @@ section {
   }
 
   .values-item img {
-    flex: 0 0 120px;   
-    width: 120px;
-    height: 120px;
+    flex: 0 0 auto;           
+    height: auto;
+    max-height: 100%;         
+    width: auto;              
     object-fit: contain;
-    padding-right: 10px;
   }
 
   .values-text {
-    flex: 1;
+    flex: 1.2;
     padding-right: 10px;
   }
 
