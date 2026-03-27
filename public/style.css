@@ -862,6 +862,12 @@ section {
     width: 35%; */
     
   }
+
+  @media (max-width: 450px) {
+    .values-item img {
+      padding-left: 2px; 
+    }
+  }
   
 }
 
