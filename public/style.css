@@ -19,7 +19,7 @@ p {
   margin-top: 0;
 
   color: #333;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 300; 
   line-height: 1.5;
   text-align: left;       
@@ -193,7 +193,7 @@ section {
   background-color: #1B9E9E;
   color: #F4EDEA;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
   text-align: center;
   border-radius: 4px;
   transition: background-color 0.3s;
@@ -316,10 +316,20 @@ section {
   margin-bottom: 10px;
 }
 
+.values-item .image1 img {
+  position: relative;
+  left: -10px; 
+}
+
 .values-item h3 {
   font-size: 20px;
   margin-bottom: 10px;
 
+}
+
+.values-item p {
+  font-size: 19px;
+  font-weight: 300;
 }
 
 
@@ -349,7 +359,7 @@ section {
 
 .submit-intro {
   font-family: 'Oswald', sans-serif;   
-  font-size: 17px;                                  
+  font-size: 20px;                                  
   line-height: 1.5; 
 }
 
@@ -362,7 +372,7 @@ section {
   margin-bottom: 0px;
 
   font-weight: 500;
-  font-size: 17px;
+  font-size: 20px;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -378,7 +388,7 @@ section {
   border-radius: 4px;
 
   font-family: 'Oswald', sans-serif;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .submit-content .sub-label {
@@ -389,7 +399,7 @@ section {
 
   color: #000000;                  
   font-family: 'Oswald', sans-serif;  
-  font-size: 17px;        
+  font-size: 18px;        
   font-weight: 300;       
 }
 
@@ -410,7 +420,7 @@ section {
 
   color: #F4EDEA;
   font-family: 'Oswald', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
 
   cursor: pointer;
   transition: background-color 0.3s;
@@ -502,7 +512,7 @@ section {
 .footer-link {
   color: white;
   font-family: 'Oswald', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -720,6 +730,11 @@ section {
     width: 120px;        
     flex-shrink: 0;      
     object-fit: contain; 
+  }
+
+  .values-item .image1 img {
+    left: -6px; 
+    bottom: -5px;
   }
 
   .values-item .values-text {
