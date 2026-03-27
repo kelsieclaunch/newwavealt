@@ -11,7 +11,7 @@ h2 {
   font-family: 'Futura', sans-serif;
   font-size: 36px;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   text-align: left;
 }
 
@@ -19,7 +19,7 @@ p {
   margin-top: 0;
 
   color: #333;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300; 
   line-height: 1.5;
   text-align: left;       
@@ -193,7 +193,7 @@ section {
   background-color: #1B9E9E;
   color: #F4EDEA;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   border-radius: 4px;
   transition: background-color 0.3s;
@@ -315,7 +315,7 @@ section {
 }
 
 .values-item h3 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 10px;
 
 }
@@ -347,7 +347,7 @@ section {
 
 .submit-intro {
   font-family: 'Oswald', sans-serif;   
-  font-size: 20px;                                  
+  font-size: 18px;                                  
   line-height: 1.5; 
 }
 
@@ -360,7 +360,7 @@ section {
   margin-bottom: 0px;
 
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -387,7 +387,7 @@ section {
 
   color: #000000;                  
   font-family: 'Oswald', sans-serif;  
-  font-size: 18px;        
+  font-size: 16px;        
   font-weight: 300;       
 }
 
@@ -408,7 +408,7 @@ section {
 
   color: #F4EDEA;
   font-family: 'Oswald', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 
   cursor: pointer;
   transition: background-color 0.3s;
@@ -500,7 +500,7 @@ section {
 .footer-link {
   color: white;
   font-family: 'Oswald', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -723,11 +723,11 @@ section {
   }
 
   .values-text p{
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .values-text h3{
-    font-size: 20px;
+    font-size: 18px;
   }
 
 
@@ -756,7 +756,7 @@ section {
   .submit-intro {
     margin-top: 0px;
 
-    font-size: 17.5px;
+    font-size: 16px;
     text-align: left; 
   }
 
@@ -764,7 +764,7 @@ section {
   .submit-content input,
   .submit-content select,
   .submit-content textarea {
-    font-size: 17px;
+    font-size: 16px;
     padding-top: 2px;
   }
 
