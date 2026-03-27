@@ -647,6 +647,7 @@ section {
 
   .about-content {
     max-width: 100%;
+    padding-left: 0px;
 
     text-align: left;
   }
@@ -685,6 +686,7 @@ section {
   .values-about {
     max-width: 100%;
     text-align: left;
+    padding-left: 0px;
   }
 
   .values-about h2 {
