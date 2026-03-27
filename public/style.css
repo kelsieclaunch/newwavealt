@@ -308,8 +308,8 @@ section {
 }
 
 .values-item img {
-  width: 200px;
-  height: 200px;
+  height: 200px;      /* all images same height */
+  width: auto; 
   margin-bottom: 10px;
 }
 
@@ -696,14 +696,14 @@ section {
 
   .values-grid {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; 
     gap: 20px; 
-
   }
 
+  
   .values-item {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row;      
+    align-items: center;  
     gap: 16px;
 
     width: 100%;
@@ -711,16 +711,17 @@ section {
   }
 
   .values-item img {
-    flex: 0 0 auto;         
-    max-width: 30%;         
-    height: auto;          
-    margin-bottom: 0;     
-    object-fit: contain;
+    flex: 0 0 auto;           
+    height: 120px;            
+    width: auto;              
+    object-fit: contain;       
   }
 
   .values-text {
-    flex: 1;
-    padding-right: 10px;
+    flex: 1;                
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
   }
 
   .values-text p{
