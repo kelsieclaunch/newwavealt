@@ -676,7 +676,7 @@ section {
     max-width: 100%;
     margin: 0 auto; 
     padding-left: 20px; 
-    padding-right: 0px;
+    padding-right: 20px;
   }
 
   .values-about {
@@ -695,7 +695,7 @@ section {
   }
 
   .values-grid {
-    flex-direction: column;  
+    flex-direction: column;
     gap: 20px;
   }
 
@@ -706,6 +706,7 @@ section {
     gap: 16px;
 
     width: 100%;
+    max-width: 100%;
   }
 
 
