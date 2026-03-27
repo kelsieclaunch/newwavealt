@@ -674,9 +674,9 @@ section {
 
   .values-section {
     max-width: 700px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0 auto; 
+    padding-left: 0; 
+    padding-right: 0;
   }
 
   .values-about {
@@ -695,23 +695,25 @@ section {
   }
 
   .values-grid {
-    flex-direction: column;  /* stack items vertically */
+    flex-direction: column;  
     gap: 20px;
   }
 
   .values-item {
     display: flex;
-    flex-direction: row;      
-    align-items: center;      
+    flex-direction: row;
+    align-items: center;
     gap: 16px;
+
     width: 100%;
   }
 
 
-  .values-item img {
-    height: 120px;            /* fixed height for visual consistency */
-    width: auto;              /* maintain aspect ratio */
-    flex-shrink: 0;           /* prevent shrinking */
+   .values-item img {
+    height: 120px;
+    width: 120px;        
+    flex-shrink: 0;      
+    object-fit: contain; 
   }
 
   .values-item .values-text {
