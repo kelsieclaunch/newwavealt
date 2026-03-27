@@ -864,7 +864,7 @@ section {
   }
 
   @media (max-width: 450px) {
-    .values-item img {
+    .values-item {
       padding-left: 2px; 
     }
   }
