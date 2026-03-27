@@ -710,7 +710,7 @@ section {
   }
 
 
-   .values-item img {
+  .values-item img {
     height: 200px;
     width: 200px;        
     flex-shrink: 0;      
@@ -718,8 +718,7 @@ section {
   }
 
   .values-item .values-text {
-    flex: 1;
-    margin-left: 20px;        
+    flex: 1;       
   }
 
   .values-text p{
