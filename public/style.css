@@ -711,8 +711,8 @@ section {
 
 
    .values-item img {
-    height: 120px;
-    width: 120px;        
+    height: 200px;
+    width: 200px;        
     flex-shrink: 0;      
     object-fit: contain; 
   }
