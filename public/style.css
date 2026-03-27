@@ -696,21 +696,24 @@ section {
 
   .values-grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;  
     gap: 20px;
+    align-items: flex-start;  
+    flex-wrap: wrap;       
   }
 
   .values-item {
     display: flex;
-    flex-direction: row;       
-    align-items: center;       
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start; 
+    max-width: 30%;          
   }
 
+
   .values-item img {
-    flex: 0 0 30%;             
-    height: 200px;             
-    object-fit: cover;         
+    height: 200px;           
+    width: auto;             
+    display: block;
   }
 
   .values-text {
