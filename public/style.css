@@ -709,7 +709,7 @@ section {
 
 
   .values-item img {
-    height: 200px;            /* fixed height for visual consistency */
+    height: 120px;            /* fixed height for visual consistency */
     width: auto;              /* maintain aspect ratio */
     flex-shrink: 0;           /* prevent shrinking */
   }
