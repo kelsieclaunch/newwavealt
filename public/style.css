@@ -711,9 +711,10 @@ section {
   }
 
   .values-item img {
-    flex: 0 0 30%;       
-    max-width: 100%;
-    height: auto;        
+    flex: 0 0 auto;         
+    max-width: 30%;         
+    height: auto;          
+    margin-bottom: 0;     
     object-fit: contain;
   }
 
