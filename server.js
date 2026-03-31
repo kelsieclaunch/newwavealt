@@ -63,7 +63,7 @@ app.post('/submit', submitLimiter, upload.single('file-upload'), async (req, res
 
   const mailOptions = {
     from: `"New Wave Alt" <no-reply@newwavealt.com>`,
-    to: [process.env.GMAIL_USER, 'britt@newwavealt.com'],
+    to: [process.env.GMAIL_USER, 'britt@newwavealt.com', 'ali@newwavealt.com'],
     subject: `New Submission: ${name}`,
     text: `
 Name: ${name}
@@ -73,7 +73,7 @@ Submitted on behalf of: ${onBehalf}
 Industry role: ${industry}
 How they heard about New Wave Alt: ${hearAbout}
 URL: ${url || 'N/A'}
-Additional Info: ${additionalInfo || 'N/A'}
+Additional Info/Why New Wave Alt: ${additionalInfo || 'N/A'}
     `,
     attachments: file
       ? [
