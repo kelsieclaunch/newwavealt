@@ -6,6 +6,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import rateLimit from 'express-rate-limit';
 
+
 // Setup __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -104,3 +105,29 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+app.post("/submit", async (req, res) => {
+  const token = req.body["g-recaptcha-response"];
+
+  const secret = process.env.RECAPTCHA_SECRET_KEY;
+
+  const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      secret,
+      response: token,
+    }),
+  });
+
+  const data = await response.json();
+
+  if (!data.success) {
+    return res.send("Failed reCAPTCHA");
+  }
+
+  res.send("Form submitted successfully!");
+});
+
+
+

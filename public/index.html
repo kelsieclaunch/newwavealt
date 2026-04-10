@@ -6,6 +6,7 @@
     <title>New Wave Alternative</title>
     <link rel="icon" type="image/png" href="assets/cd2.png">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -166,6 +167,17 @@
         <label for="additional-info">ADDITIONAL INFORMATION</label>
         <span class="sub-label">Why New Wave Alt?</span>
         <textarea id="additional-info" name="additional-info" rows="4" required></textarea>
+
+        <!-- Checkbox -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I have reviewed the values</label>
+        </div>
+
+        <!-- recaptcha -->
+        <div class="recaptcha-container">
+        <div class="g-recaptcha" data-sitekey="6LdKA7AsAAAAAF2kOyObvHfStZgQY-PTcagVkRZi"></div>
+        </div>
 
         <button type="submit">SUBMIT</button>
         </form>

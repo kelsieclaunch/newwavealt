@@ -368,6 +368,44 @@ section {
   line-height: 1.5; 
 }
 
+/* Terms checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+
+.submit-content .checkbox-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;   
+  margin: 0;
+
+  accent-color: #1B9E9E;
+}
+
+
+.submit-content .checkbox-container label {
+  display: inline;
+  margin: 0;
+
+  font-size: 20px;    
+  font-weight: 300;    
+}
+
+.submit-content .checkbox-container input[type="checkbox"]:hover {
+  accent-color: #47D6CD;
+}
+
+/* reCAPTCHA */
+.recaptcha-container {
+  margin-top: 20px;
+}
+
+
+
 
 /* Labels */
 .submit-content label {
