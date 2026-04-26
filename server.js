@@ -48,6 +48,29 @@ app.post('/submit', submitLimiter, upload.single('file-upload'), async (req, res
     return res.status(200).send('Thanks!');
   }
 
+  try {
+    const token = req.body["g-recaptcha-response"];
+    const secret = process.env.RECAPTCHA_SECRET_KEY;
+
+    if (!token) {
+      return res.status(400).send('reCAPTCHA token missing');
+    }
+
+    const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        secret,
+        response: token,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (!data.success) {
+      return res.status(400).send('Failed reCAPTCHA');
+    }
+
   const sanitize = (value, max = 1000) =>
     typeof value === 'string' ? value.slice(0, max).trim() : '';
   const name = sanitize(req.body.name, 100);
@@ -87,47 +110,29 @@ Additional Info/Why New Wave Alt: ${additionalInfo || 'N/A'}
 
   };
 
-  try {
+  
+
     await transporter.sendMail(mailOptions);
+
     console.log('Email sent successfully!');
     res.status(200).send('Submission received! Thank you.');
+
   } catch (err) {
-    console.error('Error sending email:', err);
+    console.error('Error processing submission:', err);
     res.status(500).send('Something went wrong. Please try again.');
   }
 });
 
-// Catch-all route to support client-side routing if needed
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+// // Catch-all route to support client-side routing if needed
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
 
-app.post("/submit", async (req, res) => {
-  const token = req.body["g-recaptcha-response"];
 
-  const secret = process.env.RECAPTCHA_SECRET_KEY;
-
-  const response = await fetch("https://www.google.com/recaptcha/api/siteverify", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      secret,
-      response: token,
-    }),
-  });
-
-  const data = await response.json();
-
-  if (!data.success) {
-    return res.send("Failed reCAPTCHA");
-  }
-
-  res.send("Form submitted successfully!");
-});
 
 
 
