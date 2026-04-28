@@ -68,7 +68,8 @@ app.post('/submit', submitLimiter, upload.single('file-upload'), async (req, res
     const data = await response.json();
 
     if (!data.success) {
-      return res.status(400).send('Failed reCAPTCHA');
+      console.warn('reCAPTCHA failed:', data);
+      return res.status(400).send('Security verification failed');
     }
 
   const sanitize = (value, max = 1000) =>
@@ -123,14 +124,14 @@ Additional Info/Why New Wave Alt: ${additionalInfo || 'N/A'}
   }
 });
 
-// // Catch-all route to support client-side routing if needed
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
+// Catch-all route to support client-side routing if needed
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
-// app.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 
 
