@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #f5f5f5;
+    font-family: 'Oswald', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-login {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-header {
+    width: 100%;
+    padding: 60px 20px 45px;
+
+    background-image: url("../public/assets/background.png");
+    background-size: cover;
+    background-position: center;
+
+    text-align: center;
+}
+
+.admin-logo {
+    display: block;
+
+    width: 420px;
+    max-width: 80%;
+    height: auto;
+
+    margin: 0 auto 25px;
+}
+
+
+
+.admin-header h2 {
+    margin-top: 18px;
+
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: white;
+    letter-spacing: .18em;
+}
+
+.login-form {
+    width: min(420px, 90vw);
+
+    margin: -40px auto 60px;
+    padding: 40px 40px 25px;
+
+    background: white;
+    border-radius: 8px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.login-form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.login-form input {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-bottom: 24px;
+    padding: 12px 14px;
+
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #1B9E9E;
+
+    box-shadow: 0 0 0 3px rgba(27,158,158,.15);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #1B9E9E;
+
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+
+    cursor: pointer;
+    transition: background .25s;
+}
+
+.login-form button:hover {
+    background: #47D6CD;
+}
+
+.login-error {
+    min-height: 0;
+    margin: 15px 0 0;
+
+    color: #b3261e;
+    text-align: center;
+}
+
+.admin-trim {
+    width: 100%;
+    line-height: 0;
+}
+
+.admin-trim img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.footer-pattern {
+  position: relative; 
+
+  height: 100px;                 
+  width: 100%;
+
+  background-image: url('../public/assets/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;        
+  background-position: center;  
+}
+

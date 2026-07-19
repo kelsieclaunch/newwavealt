@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>New Wave Alternative</title>
+    
+    <link rel="icon" type="image/png" href="../public/assets/cd2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <main class="admin-login">
+
+        <div class="admin-header">
+
+            <img src="../public/assets/logo.png" class="admin-logo" alt="New Wave Alternative">
+
+            <h2>ADMIN LOGIN</h2>
+
+        </div>
+
+        <div class="admin-trim">
+            <img src="../public/assets/trim.png" alt="Checker Trim">
+        </div>
+
+
+        <form id="loginForm" class="login-form">
+
+            <label for="email">
+                EMAIL
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                autocapitalize="off"
+                spellcheck="false"
+                required
+            >
+
+
+            <label for="password">
+                PASSWORD
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="current-password"
+                required
+            >
+
+
+            <button type="submit">
+                LOGIN
+            </button>
+            <p id="loginError" class="login-error"></p>
+
+        </form>
+
+
+        <div class="admin-trim">
+            <img src="../public/assets/trim.png" alt="Checker Trim">
+        </div>
+
+    </main>
+
+    <footer class="footer-pattern">
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="admin.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>

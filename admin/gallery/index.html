@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Gallery Management</title>
+
+    <link rel="icon" type="image/png" href="../../public/assets/cd2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+<main class="gallery-admin">
+    
+
+    <header class="gallery-header">
+
+        <nav class="admin-nav">
+
+            <a href="../dashboard.html" class="back-link">
+
+                <span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+
+                BACK TO DASHBOARD
+
+            </a>
+
+        </nav>
+
+        <img 
+            src="../../public/assets/logo.png"
+            class="gallery-logo"
+            alt="New Wave Alternative"
+        >
+
+        <h2>GALLERY MANAGEMENT</h2>
+
+    </header>
+
+
+    <div class="admin-trim">
+        <img src="../../public/assets/trim.png" alt="Checker Trim">
+    </div>
+
+
+    <section class="gallery-upload">
+
+        <h3>UPLOAD IMAGE</h3>
+
+
+        <form id="galleryUploadForm">
+
+            <label>
+                IMAGE
+            </label>
+
+            <input
+                type="file"
+                id="image"
+                accept="image/*"
+                required
+            >
+
+
+            <label>
+                ARTIST
+            </label>
+
+            <input
+                type="text"
+                id="artist"
+            >
+
+
+            <label>
+                PHOTOGRAPHER
+            </label>
+
+            <input
+                type="text"
+                id="photographer"
+            >
+
+
+            <label>
+                PHOTOGRAPHER INSTAGRAM
+            </label>
+
+            <input
+                type="text"
+                id="photographerInstagram"
+            >
+
+
+            <label>
+                ALT TEXT
+            </label>
+
+            <input
+                type="text"
+                id="altText"
+            >
+
+
+            <label>
+                DISPLAY LAYOUT
+            </label>
+
+            <select id="orientation">
+
+                <option value="portrait">Portrait Only</option>
+                <option value="landscape">Landscape Only</option>
+                <option value="either">Either</option>
+
+            </select>
+
+
+            <button type="submit">
+                UPLOAD
+            </button>
+
+
+            <p id="uploadStatus"></p>
+
+
+        </form>
+
+
+    </section>
+
+    <section class="gallery-list">
+
+        <h3>EXISTING IMAGES</h3>
+
+        <div id="galleryItems" class="gallery-items">
+            <!-- Images will load here -->
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase.js"></script>
+<script src="gallery.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>New Wave Alternative</title>
+
+    <link rel="icon" type="image/png" href="../public/assets/cd2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+    <body>
+        <main class="dashboard">
+
+            <header class="dashboard-header">
+
+                <img 
+                    src="../public/assets/logo.png" 
+                    class="dashboard-logo"
+                    alt="New Wave Alternative"
+                >
+
+                <h2>ADMIN DASHBOARD</h2>
+
+            </header>
+
+
+            <div class="admin-trim">
+                <img src="../public/assets/trim.png" alt="Checker Trim">
+            </div>
+
+
+            <section class="dashboard-content">
+
+                <p id="userEmail"></p>
+
+
+                <div class="dashboard-grid">
+
+                    <a href="gallery/index.html" class="dashboard-card">
+                        <h3>GALLERY</h3>
+                        <p>Upload and manage gallery content.</p>
+                    </a>
+
+                    <a href="features/index.html" class="dashboard-card">
+                        <h3>FEATURES</h3>
+                        <p>Manage features.</p>
+                    </a>
+
+                </div>
+
+
+                <div class="dashboard-actions">
+                    <button id="logoutButton">
+                        LOG OUT
+                    </button>
+                </div>
+
+            </section>
+
+
+            <div class="admin-trim">
+                <img src="../public/assets/trim.png" alt="Checker Trim">
+            </div>
+
+
+        </main>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="supabase.js"></script>
+        <script src="dashboard.js"></script>
+    </body>
+</html>

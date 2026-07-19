@@ -1,0 +1,178 @@
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background: #f5f5f5;
+
+    font-family: 'Oswald', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.features-admin {
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+/* Header */
+
+.features-header {
+
+    width: 100%;
+
+    padding: 70px 20px 50px;
+
+    background-image: url("../../public/assets/background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    text-align: center;
+
+}
+
+
+.features-logo {
+
+    display: block;
+
+    width: 420px;
+
+    max-width: 80%;
+
+    height: auto;
+
+    margin: 0 auto 25px;
+
+}
+
+
+.features-header h2 {
+
+    margin-top: 25px;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 300;
+
+    letter-spacing: .18em;
+
+}
+
+
+/* Trim */
+
+.admin-trim {
+
+    width: 100%;
+
+    line-height: 0;
+
+}
+
+
+.admin-trim img {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+
+/* Construction Card */
+
+.construction-card {
+
+    width: min(500px, 90vw);
+
+    margin: 60px auto;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+
+    text-align: center;
+
+}
+
+
+.construction-card h3 {
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    letter-spacing: .08em;
+
+}
+
+
+.construction-card p {
+
+    margin-bottom: 35px;
+
+    font-size: 18px;
+
+    color: #555;
+
+}
+
+
+/* Back Button */
+
+.construction-card a {
+
+    display: block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    border-radius: 4px;
+
+    background: #1B9E9E;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    letter-spacing: .08em;
+
+    transition: background .25s;
+
+}
+
+
+.construction-card a:hover {
+
+    background: #47D6CD;
+
+}
