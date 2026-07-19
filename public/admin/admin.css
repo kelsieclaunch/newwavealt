@@ -21,7 +21,7 @@ body {
     width: 100%;
     padding: 60px 20px 45px;
 
-    background-image: url("../public/assets/background.png");
+    background-image: url("../assets/background.png");
     background-size: cover;
     background-position: center;
 
@@ -140,7 +140,7 @@ body {
   height: 100px;                 
   width: 100%;
 
-  background-image: url('../public/assets/background.png');
+  background-image: url('../assets/background.png');
   background-repeat: no-repeat;
   background-size: cover;        
   background-position: center;  

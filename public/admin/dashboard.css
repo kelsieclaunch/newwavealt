@@ -22,7 +22,7 @@ body {
     width: 100%;
     padding: 60px 20px 40px;
 
-    background-image: url("../public/assets/background.png");
+    background-image: url("../assets/background.png");
     background-size: cover;
     background-position: center;
 
