@@ -99,6 +99,7 @@ section {
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  margin-left: 20px;
 }
 
 .submark a {
@@ -111,7 +112,7 @@ section {
   height: 50px;     
   width: auto;
   transition: opacity 0.2s ease;
-  margin-left: 20px;
+  
 }
 
 .submark img:hover {
@@ -940,7 +941,7 @@ section {
   }
 
   .navbar ul {
-    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;        
     padding-right: 20px;       
     gap: 10px;             
