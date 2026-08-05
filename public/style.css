@@ -112,6 +112,7 @@ section {
   height: 50px;     
   width: auto;
   transition: opacity 0.2s ease;
+  margin-top: 6px;
   
 }
 
@@ -960,6 +961,7 @@ section {
 
   .submark img {
     height: 32px;
+    margin-top: 10px;
   }
 
   .navbar ul {
