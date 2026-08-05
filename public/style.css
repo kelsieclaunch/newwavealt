@@ -959,6 +959,10 @@ section {
     white-space: nowrap;    
   }
 
+  .submark{
+    margin-left: 10px;
+  }
+
   .submark img {
     height: 36px;
     margin-top: 6px;
