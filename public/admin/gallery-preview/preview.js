@@ -50,18 +50,34 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 <div class="preview-overlay">
 
-                    <p>
-                        ${item.artist || "Unknown Artist"}
-                    </p>
+                    <a
+                        href="${item.photographer_instagram || "#"}"
+                        class="overlay-text"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h6>
+                            <em>
+                                ${item.artist || "Unknown Artist"},
+                            photographed by
+                            ${item.photographer || "Unknown Photographer"}
+                            </em>
+                        </h6>
+                    </a>
 
-                    <span>
-                        ${item.photographer || ""}
-                    </span>
+                    <button
+                        class="expand-btn"
+                        aria-label="Expand image"
+                    >
+                        <img
+                            src="../../public/assets/white expand.svg"
+                            alt=""
+                        >
+                    </button>
 
                 </div>
 
             `;
-
 
             container.appendChild(galleryItem);
 
