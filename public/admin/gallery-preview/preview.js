@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         aria-label="Expand image"
                     >
                         <img
-                            src="../../public/assets/white expand.svg"
+                            src="/assets/white expand.svg"
                             alt=""
                         >
                     </button>

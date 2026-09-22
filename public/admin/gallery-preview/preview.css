@@ -82,7 +82,6 @@ body {
 /* Gallery Items */
 
 .preview-item {
-
     position: relative;
 
     width: 100%;
@@ -93,9 +92,6 @@ body {
 
 
 .preview-item img {
-
-    display: block;
-
     width: 100%;
     height: 100%;
 
@@ -126,33 +122,25 @@ body {
 }
 
 
-/* Overlay */
+/* Gallery Overlay */
 
-.preview-item .preview-overlay {
+.preview-overlay {
 
     position: absolute;
 
     inset: 0;
 
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    padding: 20px;
-
-    box-sizing: border-box;
-
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.75),
-        rgba(0, 0, 0, 0)
-    );
+    background: rgba(0,0,0,0.6);
 
     opacity: 0;
 
     transition: opacity 0.3s ease;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
 
@@ -164,49 +152,95 @@ body {
 
 /* Overlay Text */
 
-.preview-overlay a {
+.overlay-text {
 
     color: white;
 
     text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    z-index: 2;
 }
 
 
-.preview-overlay h6 {
+.overlay-text h6 {
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 200;
+
+    color: white;
+
+    line-height: .85;
+
+    text-align: center;
 
     margin: 0;
+}
 
-    font-size: 18px;
-    font-weight: 400;
+
+.overlay-text:hover h6 {
+
+    transform: scale(1.03);
 }
 
 
 /* Expand Button */
 
-.preview-item .expand-btn {
+.expand-btn {
 
-    display: flex;
+    position: absolute;
 
-    align-items: center;
-    justify-content: center;
+    bottom: 10px;
 
-    width: 35px;
-    height: 35px;
+    right: 10px;
 
-    padding: 0;
+    background: none;
 
     border: none;
 
-    background: transparent;
+    padding: 0;
 
     cursor: pointer;
+
+    z-index: 3;
 }
 
 
-.preview-item .expand-btn img {
+.expand-btn img {
 
-    width: 24px;
-    height: 24px;
+    width: 22px;
 
-    object-fit: contain;
+    height: 22px;
+
+    opacity: 0.9;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.expand-btn:hover img {
+
+    opacity: 1;
+
+    transform: scale(1.1);
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .preview-item:hover .preview-overlay {
+
+        opacity: 1;
+    }
+
 }
