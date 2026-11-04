@@ -26,7 +26,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         if (error) {
             console.error("Failed to load gallery:", error);
-            container.textContent = "Failed to load gallery.";
+
+            container.textContent =
+                `Gallery error: ${error.message}`;
+
             return;
         }
 
