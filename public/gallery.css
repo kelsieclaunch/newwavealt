@@ -1,0 +1,326 @@
+/* GALLERY */
+
+.gallery {
+    padding: 90px;
+    padding-bottom: 90px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 100px;
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual gallery images */
+
+.preview-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.preview-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* IMAGE OVERLAY */
+
+.preview-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Photographer / artist credit */
+
+.overlay-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+
+    z-index: 2;
+}
+
+.overlay-text h6 {
+    margin: 0;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 0.85;
+
+    color: white;
+}
+
+/* Expand button */
+
+.expand-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    z-index: 3;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.expand-btn img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+}
+
+.expand-btn:hover img {
+    transform: scale(1.1);
+}
+
+/* Desktop hover behavior */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .preview-item:hover .preview-overlay {
+        opacity: 1;
+    }
+
+}
+
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+/* Enlarged image */
+
+.lightbox-img {
+    display: block;
+
+    max-width: 90%;
+    max-height: 90%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 25px;
+
+    touch-action: pan-y;
+}
+
+/* Close button */
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    z-index: 10001;
+
+    color: white;
+    font-size: 40px;
+    font-weight: 200;
+
+    cursor: pointer;
+}
+
+/* Previous / next buttons */
+
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 10001;
+
+    padding: 10px 16px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+.lightbox-arrow.left {
+    left: 20px;
+}
+
+.lightbox-arrow.right {
+    right: 20px;
+}
+
+/* Caption */
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+
+    width: 100%;
+    padding: 0 20px;
+
+    color: white;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+
+    text-align: center;
+}
+
+.lightbox-caption a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* MOBILE GALLERY */
+
+@media (max-width: 950px) {
+
+    .gallery {
+        padding: 40px;
+    }
+
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+
+        gap: 16px;
+
+        grid-template-columns: unset;
+        grid-auto-rows: unset;
+    }
+
+    /* Override JavaScript grid positioning */
+
+    .preview-item {
+        grid-column: unset !important;
+        grid-row: unset !important;
+
+        position: relative;
+
+        display: inline-block;
+
+        width: 100%;
+        height: auto;
+
+        line-height: 0;
+
+        overflow: hidden;
+        border-radius: 6px;
+    }
+
+    .preview-item img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        object-fit: cover;
+
+        border-radius: 6px;
+    }
+
+    /* Mobile overlays appear when tapped */
+
+    .preview-overlay {
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity 0.25s ease;
+    }
+
+    .preview-item.active .preview-overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .expand-btn img {
+        width: 18px;
+        height: 18px;
+        opacity: 0.9;
+    }
+
+}
+
+
+/* MOBILE LIGHTBOX */
+
+@media (max-width: 600px) {
+
+    .lightbox-img {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    .lightbox-close {
+        top: 15px;
+        right: 20px;
+    }
+
+    .lightbox-arrow.left {
+        left: 5px;
+    }
+
+    .lightbox-arrow.right {
+        right: 5px;
+    }
+
+    .lightbox-arrow {
+        font-size: 30px;
+    }
+
+    .lightbox-caption {
+        font-size: 16px;
+        bottom: 15px;
+    }
+
+}
