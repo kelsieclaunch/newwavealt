@@ -56,6 +56,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const context = canvas.getContext("2d");
 
+        context.imageSmoothingEnabled = true;
+        context.imageSmoothingQuality = "high";
+
         context.drawImage(bitmap, 0, 0, width, height);
 
         bitmap.close();
@@ -71,13 +74,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 resolve(result);
 
-            }, "image/png");
+            }, "image/jpeg", quality);
 
         });
 
         // TYPE CHECK HERE
-        if (blob.type !== "image/png") {
-            throw new Error("Your browser could not generate PNG images.");
+        if (blob.type !== "image/jpeg") {
+            throw new Error("Your browser could not generate JPEG images.");
         }
         
 
@@ -426,13 +429,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const baseName = `${timestamp}-${nameWithoutExtension}`;
 
 
-                const thumbnailPath = `${baseName}-thumbnail.png`;
-                const lightboxPath = `${baseName}-lightbox.png`;
+                const thumbnailPath = `${baseName}-thumbnail.jpeg`;
+                const lightboxPath = `${baseName}-lightbox.jpeg`;
 
                 // Generate optimized images
                 const thumbnail = await createOptimizedImage(
                     file,
-                    1800,
+                    900,
                     0.95
                 );
 
@@ -461,7 +464,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     await supabaseClient.storage
                         .from("gallery")
                         .upload(thumbnailPath, thumbnail, {
-                            contentType: "image/png"
+                            contentType: "image/jpeg"
                         });
 
                 if (thumbnailError) throw thumbnailError;
@@ -475,7 +478,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     await supabaseClient.storage
                         .from("gallery")
                         .upload(lightboxPath, lightboxImage, {
-                            contentType: "image/png"
+                            contentType: "image/jpeg"
                         });
 
                 if (lightboxError) throw lightboxError;
