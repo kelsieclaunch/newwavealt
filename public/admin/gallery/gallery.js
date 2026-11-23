@@ -71,13 +71,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 resolve(result);
 
-            }, "image/jpeg", quality);
+            }, "image/png");
 
         });
 
         // TYPE CHECK HERE
-        if (blob.type !== "image/jpeg") {
-            throw new Error("Your browser could not generate JPEG images.");
+        if (blob.type !== "image/png") {
+            throw new Error("Your browser could not generate PNG images.");
         }
         
 
@@ -426,8 +426,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const baseName = `${timestamp}-${nameWithoutExtension}`;
 
 
-                const thumbnailPath = `${baseName}-thumbnail.jpeg`;
-                const lightboxPath = `${baseName}-lightbox.jpeg`;
+                const thumbnailPath = `${baseName}-thumbnail.png`;
+                const lightboxPath = `${baseName}-lightbox.png`;
 
                 // Generate optimized images
                 const thumbnail = await createOptimizedImage(
@@ -461,7 +461,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     await supabaseClient.storage
                         .from("gallery")
                         .upload(thumbnailPath, thumbnail, {
-                            contentType: "image/jpeg"
+                            contentType: "image/png"
                         });
 
                 if (thumbnailError) throw thumbnailError;
@@ -475,7 +475,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     await supabaseClient.storage
                         .from("gallery")
                         .upload(lightboxPath, lightboxImage, {
-                            contentType: "image/jpeg"
+                            contentType: "image/png"
                         });
 
                 if (lightboxError) throw lightboxError;
