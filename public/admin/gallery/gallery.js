@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Generate optimized images
                 const thumbnail = await createOptimizedImage(
                     file,
-                    900,
+                    1800,
                     0.95
                 );
 
