@@ -37,6 +37,54 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
 
+    async function createOptimizedImage(file, maxDimension, quality) {
+
+        const bitmap = await createImageBitmap(file);
+
+        const scale = Math.min(
+            1,
+            maxDimension / Math.max(bitmap.width, bitmap.height)
+        );
+
+        const width = Math.round(bitmap.width * scale);
+        const height = Math.round(bitmap.height * scale);
+
+        const canvas = document.createElement("canvas");
+
+        canvas.width = width;
+        canvas.height = height;
+
+        const context = canvas.getContext("2d");
+
+        context.drawImage(bitmap, 0, 0, width, height);
+
+        bitmap.close();
+
+        const blob = await new Promise((resolve, reject) => {
+
+            canvas.toBlob(result => {
+
+                if (!result) {
+                    reject(new Error("Image optimization failed."));
+                    return;
+                }
+
+                resolve(result);
+
+            }, "image/webp", quality);
+
+        });
+
+        if (blob.type !== "image/webp") {
+            throw new Error("Your browser could not generate WebP images.");
+        }
+
+        return blob;
+
+    }
+
+
+
     async function loadGallery() {
 
         const container = document.getElementById('galleryItems');
@@ -298,11 +346,19 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 try {
 
-                    // Delete from Storage
+                    // Delete all image versions from Storage
+                    const imagePaths = [
+                        item.image_path,
+                        item.thumbnail_path,
+                        item.lightbox_path
+                    ].filter(Boolean);
+
                     const { error: storageError } =
                         await supabaseClient.storage
                             .from("gallery")
-                            .remove([item.image_path]);
+                            .remove(imagePaths);
+
+
 
                     if (storageError) throw storageError;
 
@@ -334,56 +390,107 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 
+    
     if (form) {
 
         form.addEventListener('submit', async (e) => {
 
             e.preventDefault();
 
-
             const fileInput = document.getElementById('image');
             const file = fileInput.files[0];
 
-
             if (!file) {
-
                 message.textContent = "Please select an image.";
                 return;
-
             }
 
+            const uploadedPaths = [];
 
             try {
 
-                // sanitize filename
+                message.textContent = "Optimizing images...";
+
+                // Generate unique filenames
+                const timestamp = Date.now();
                 const safeName = file.name.replace(/\s+/g, "-");
 
-                const fileName = `${Date.now()}-${safeName}`;
+                const extensionIndex = safeName.lastIndexOf(".");
+                const nameWithoutExtension = extensionIndex > 0
+                    ? safeName.slice(0, extensionIndex)
+                    : safeName;
+
+                const originalPath = `${timestamp}-${safeName}`;
+                const baseName = `${timestamp}-${nameWithoutExtension}`;
 
 
+                const thumbnailPath = `${baseName}-thumbnail.webp`;
+                const lightboxPath = `${baseName}-lightbox.webp`;
 
-                // upload image
-                const { error: uploadError } =
+                // Generate optimized images
+                const thumbnail = await createOptimizedImage(
+                    file,
+                    700,
+                    0.82
+                );
+
+                const lightboxImage = await createOptimizedImage(
+                    file,
+                    1800,
+                    0.88
+                );
+
+                // Upload original
+                message.textContent = "Uploading original image...";
+
+                const { error: originalError } =
                     await supabaseClient.storage
-                        .from('gallery')
-                        .upload(fileName, file);
+                        .from("gallery")
+                        .upload(originalPath, file);
 
+                if (originalError) throw originalError;
 
-                if (uploadError) {
+                uploadedPaths.push(originalPath);
 
-                    throw uploadError;
+                // Upload thumbnail
+                message.textContent = "Uploading thumbnail...";
 
-                }
+                const { error: thumbnailError } =
+                    await supabaseClient.storage
+                        .from("gallery")
+                        .upload(thumbnailPath, thumbnail, {
+                            contentType: "image/webp"
+                        });
 
+                if (thumbnailError) throw thumbnailError;
 
+                uploadedPaths.push(thumbnailPath);
 
-                // insert database record
+                // Upload lightbox image
+                message.textContent = "Uploading lightbox image...";
+
+                const { error: lightboxError } =
+                    await supabaseClient.storage
+                        .from("gallery")
+                        .upload(lightboxPath, lightboxImage, {
+                            contentType: "image/webp"
+                        });
+
+                if (lightboxError) throw lightboxError;
+
+                uploadedPaths.push(lightboxPath);
+
+                // Insert database record
+                message.textContent = "Saving gallery details...";
+
                 const { error: databaseError } =
                     await supabaseClient
-                        .from('gallery')
+                        .from("gallery")
                         .insert({
 
-                            image_path: fileName,
+                            image_path: originalPath,
+                            thumbnail_path: thumbnailPath,
+                            lightbox_path: lightboxPath,
 
                             artist:
                                 document.getElementById('artist').value,
@@ -402,29 +509,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                         });
 
-
-
-                if (databaseError) {
-
-                    throw databaseError;
-
-                }
-
-
+                if (databaseError) throw databaseError;
 
                 message.textContent = "Upload successful!";
 
                 form.reset();
 
-
-                // refresh existing images
                 await loadGallery();
-
-
 
             } catch (error) {
 
                 console.error(error);
+
+                // Clean up files if the upload or database insert fails
+                if (uploadedPaths.length > 0) {
+
+                    const { error: cleanupError } =
+                        await supabaseClient.storage
+                            .from("gallery")
+                            .remove(uploadedPaths);
+
+                    if (cleanupError) {
+                        console.error("Failed to clean up uploaded files:", cleanupError);
+                    }
+
+                }
 
                 message.textContent = error.message;
 
@@ -433,6 +542,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
     }
+
 
 
 
