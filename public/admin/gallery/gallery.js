@@ -432,14 +432,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // Generate optimized images
                 const thumbnail = await createOptimizedImage(
                     file,
-                    700,
-                    0.82
+                    900,
+                    0.95
                 );
 
                 const lightboxImage = await createOptimizedImage(
                     file,
                     1800,
-                    0.88
+                    0.96
                 );
 
                 // Upload original
