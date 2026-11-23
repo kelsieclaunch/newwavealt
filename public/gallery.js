@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const { data: urlData } = supabaseClient.storage
                 .from("gallery")
-                .getPublicUrl(item.image_path);
+                .getPublicUrl(item.thumbnail_path || item.image_path);
 
             const imageUrl = urlData.publicUrl;
 
@@ -387,7 +387,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const { data: urlData } = supabaseClient.storage
             .from("gallery")
-            .getPublicUrl(item.image_path);
+            .getPublicUrl(item.lightbox_path || item.image_path);
 
         lightboxImg.src = urlData.publicUrl;
 

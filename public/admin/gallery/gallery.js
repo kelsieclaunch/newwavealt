@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         });
 
-        // TEMP CHECK HERE
+        // TYPE CHECK HERE
         if (blob.type !== "image/jpeg") {
             throw new Error("Your browser could not generate JPEG images.");
         }
-        // END TEMP CHECK
+        
 
         return blob;
 
