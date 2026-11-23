@@ -75,9 +75,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         });
 
-        if (blob.type !== "image/webp") {
-            throw new Error("Your browser could not generate WebP images.");
-        }
+        // TEMP CHECK HERE
+        console.log("Generated image type:", blob.type);
+        console.log("Generated image size:", blob.size);
+        // END TEMP CHECK
 
         return blob;
 
